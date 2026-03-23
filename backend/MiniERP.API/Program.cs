@@ -8,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IClientService, ClientService>();
+builder.Services.AddScoped<IFactureService, FactureService>();
+builder.Services.AddScoped<IProduitService, ProduitService>();
 
 builder.Services.AddScoped<IClientService, ClientService>();
 
