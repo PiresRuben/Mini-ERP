@@ -4,12 +4,12 @@ using MiniERP.API.Models;
 
 namespace MiniERP.API.Services;
 
-// La classe qui implémente le contrat : elle dit COMMENT faire
+// La classe qui implémente le contrat
 public class ClientService : IClientService
 {
     private readonly AppDbContext _context;
 
-    // Le DbContext est injecté automatiquement par .NET (injection de dépendances)
+    // Injection de dépendances
     public ClientService(AppDbContext context)
     {
         _context = context;
